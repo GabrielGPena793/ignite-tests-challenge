@@ -40,7 +40,7 @@ describe("Show User Profile", () => {
     await expect( async() => {
       const id = "fdsafafa554a"
 
-      const userProfile = await showUserProfileUseCase.execute(id)
+      await showUserProfileUseCase.execute(id)
 
     }).rejects.toBeInstanceOf(AppError)
   })
