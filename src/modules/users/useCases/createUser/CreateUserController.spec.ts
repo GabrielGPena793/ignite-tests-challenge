@@ -23,7 +23,6 @@ describe("Create user Controller", () => {
       password: "123456"
     });
 
-    console.log(response.body)
 
     expect(response.status).toBe(201)
 
