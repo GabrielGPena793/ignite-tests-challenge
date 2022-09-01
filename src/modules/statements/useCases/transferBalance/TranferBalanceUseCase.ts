@@ -1,5 +1,4 @@
 import { inject, injectable } from "tsyringe";
-import { inherits } from "util";
 import { IUsersRepository } from "../../../users/repositories/IUsersRepository";
 import { OperationType } from "../../entities/Statement";
 import { IStatementsRepository } from "../../repositories/IStatementsRepository";
@@ -31,7 +30,7 @@ class TransferBalanceUseCase {
     const user_owner = await this.userRepository.findById(sender_user_id);
 
     if (!user_owner) {
-      throw new TransferStatementOperationError.ownerUserNotFound();
+      throw new TransferStatementOperationError.senderUserNotFound();
     }
 
     const user_destining = await this.userRepository.findById(

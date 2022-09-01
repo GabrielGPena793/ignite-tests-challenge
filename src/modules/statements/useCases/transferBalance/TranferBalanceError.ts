@@ -7,9 +7,9 @@ export namespace TransferStatementOperationError {
     }
   }
 
-  export class ownerUserNotFound extends AppError {
+  export class senderUserNotFound extends AppError {
     constructor() {
-      super("Owner User not found", 404);
+      super("Sender User not found", 404);
     }
   }
 }
